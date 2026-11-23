@@ -1,0 +1,108 @@
+/* Centraliza o cartão na tela */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 16px;
+    box-sizing: border-box;
+    background-color: #e6e2d8;
+    font-family: 'Georgia', serif;
+}
+
+/* Estilo de papel envelhecido */
+.card {
+    background-color: #f4ecd8;
+    background-image: radial-gradient(#f4ecd8 60%, #e2d1b3 100%);
+    border: 1px solid #d5c3a3;
+    border-radius: 4px;
+    padding: 40px 50px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), inset 0 0 30px rgba(168, 140, 95, 0.2);
+    color: #3b2f2f;
+}
+
+/* Cabeçalho com "Rafael" à esquerda e a foto 5 na diagonal à direita */
+.topo-carta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.destinatario {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Imagem 5 na parte de cima na diagonal sem encobrir o texto */
+.foto-topo-diagonal {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 4px solid #fffdf7;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    transform: rotate(10deg);
+}
+
+/* Corpo do texto em bloco normal para o float das fotos funcionar sem bugar */
+.texto {
+    display: block;
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.texto p {
+    text-indent: 25px;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* Dimensões padronizadas para todas as fotos espalhadas */
+.foto-espalhada {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 3px solid #fffdf7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.direita {
+    float: right;
+    margin: 4px 0 12px 18px;
+}
+
+.esquerda {
+    float: left;
+    margin: 4px 18px 12px 0;
+}
+
+/* Inclinações leves */
+.rot-1 { transform: rotate(6deg); }
+.rot-2 { transform: rotate(-7deg); }
+.rot-3 { transform: rotate(-5deg); }
+.rot-4 { transform: rotate(8deg); }
+
+/* Fotos extras antes da assinatura */
+.galeria-rodape {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Nome "Ícaro" no canto inferior direito */
+.remetente {
+    text-align: right;
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    font-style: italic;
+}
